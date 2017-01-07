@@ -4,10 +4,9 @@ python:
 # command to install dependencies
 install:
   - cd ..
-  - wget http://www.renpy.org/dl/6.99.3/renpy-6.99.3-sdk.tar.bz2
+  - wget http://www.renpy.org/dl/6.99.12/renpy-6.99.12-sdk.tar.bz2
   - tar xf renpy-6.99.3-sdk.tar.bz2
   - rm renpy-6.99.3-sdk.tar.bz2
-  - mv renpy-6.99.3-sdk renpy
-  - cd renpy
+  - cd renpy-6.99.3-sdk
 # command to run tests
-script: ./renpy.sh "../ProjectGaymore/" lint && ./renpy.sh launcher distribute "../ProjectGaymore/"
+script: ./renpy.sh "../ProjectGaymore/" lint
