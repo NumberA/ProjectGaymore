@@ -6,10 +6,10 @@ python:
 # Install Ren'Py and navigate to the Ren'Py install directory
 install:
   - cd ..
-  - wget http://www.renpy.org/dl/6.99.10/renpy-6.99.10-sdk.tar.bz2
-  - tar xf renpy-6.99.10-sdk.tar.bz2
-  - rm renpy-6.99.10-sdk.tar.bz2
-  - cd renpy-6.99.10-sdk
+  - wget http://www.renpy.org/dl/6.99.12/renpy-6.99.12-sdk.tar.bz2
+  - tar xf renpy-6.99.12-sdk.tar.bz2
+  - rm renpy-6.99.12-sdk.tar.bz2
+  - cd renpy-6.99.12-sdk
 
 # Configure Ren'Py to not use ALSA to avoid ALSA dependency errors
 env:
