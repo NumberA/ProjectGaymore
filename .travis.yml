@@ -1,12 +1,18 @@
+# Specify the language and install dependencies
 language: python
 python:
   - "2.7"
-# command to install dependencies
+
+# Install Ren'Py and navigate to the Ren'Py install directory
 install:
   - cd ..
   - wget http://www.renpy.org/dl/6.99.10/renpy-6.99.10-sdk.tar.bz2
   - tar xf renpy-6.99.10-sdk.tar.bz2
-  - rm renpy-6.99.10-sdk.tar.bz2
-  - cd renpy-6.99.10-sdk
-# command to run tests
+  - cd renpy-6.99.10-sdk.tar.bz2
+
+# Configure Ren'Py to not use ALSA to avoid ALSA dependency errors
+env:
+  - SDL_AUDIODRIVER=dummy
+
+# Run the tests
 script: ./renpy.sh "../ProjectGaymore/" lint
